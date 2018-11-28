@@ -14,6 +14,12 @@
 #' etsyURL("welcome sign", "date_desc")
 
 # etsyURL function creates the etsy.com url based on the user's search string
+library(devtools)
+document()
+
+library(rvest)
+library(tidyverse)
+library(roxygen2)
 
 etsyURL <- function(search_string, search_order='most_relevant') {
   base_url='https://www.etsy.com/search?q='
@@ -23,5 +29,4 @@ etsyURL <- function(search_string, search_order='most_relevant') {
   url <- paste0(base_url, search_string, search_order)
   return(url)
 }
-
 
