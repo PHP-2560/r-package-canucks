@@ -1,0 +1,38 @@
+Project 1: R Package
+Project Guidelines
+
+Group Aspect
+Come up with a group R Package
+Clearly assign roles for individuals
+Functions
+Vignettes
+File layout
+Make sure things are cohesive
+Keep on track with Package
+All pieces should fit well together
+
+Individual Aspect
+Work to complete your functions.
+Comment and make sure you parts are neat and well organized.
+Make sure you commit your work so that you can verify what you have done.
+
+11/21/2018-11/28/2018
+For the second part of the your work, you will be expected to start learning about R Packages:
+Hilary Parker Tutorial
+RStudio Package Creation
+MIT Package Step-by-Step Guide
+Karl Broman Package Primer
+Hadley Wickham Package Creation Book
+Getting Ready for Your Package
+You will be working in groups of 2-3 for this task.
+Identify your group
+Create your team and start a repository
+Create aREADME.md outlining what your package will be and what each member of the group will do for this package.
+
+11/28/2018
+Bring your package to Class so we can work on it.
+
+12/16/2018
+Final package due to me.
+Provide an explanation of how it is to be used and discussing the creation of it.
+Detail the parts of the app you did individually.
