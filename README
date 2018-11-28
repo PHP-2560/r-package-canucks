@@ -1,0 +1,13 @@
+Our package will scrape and process search results from etsy.com
+
+Our roles will be as follows:
+
+Nana
+- functions related to shops
+
+Meagan
+- functions related to items
+
+We will simultaneously work on the vignette.
+
+The functions are based on those created for the in-class assignment, found in etsy_functions.R
