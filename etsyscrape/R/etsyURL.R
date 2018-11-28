@@ -1,5 +1,5 @@
 #'
-#'  Function to create Etsy.com URL for item search.
+#' Function to create Etsy.com URL for item search.
 #'
 #' This function creates the URL associated with an Etsy.com search for a specific item.
 #' 
@@ -17,8 +17,6 @@
 #' @examples 
 #' etsyURL("knitted scarf")
 #' etsyURL("welcome sign", "date_desc")
-
-# etsyURL function creates the etsy.com url based on the user's search string
 
 etsyURL <- function(search_string, search_order='most_relevant') {
   base_url='https://www.etsy.com/search?q='
