@@ -14,7 +14,7 @@ Default is "most_relevent".
 Other options include "date_desc", "price_desc", "price_asc".}
 }
 \value{
-Returns an Etsy.com URL corresponding to a search for the queried item.
+Returns an Etsy.com URL as a string.
 }
 \description{
 This function creates the URL associated with an Etsy.com search for a specific item.
