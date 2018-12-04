@@ -17,9 +17,10 @@ in, the location of the shop, and links to the items themselves.
   \item etsyURL
   \item etsyXML
   \item etsyItemResults
-  \item etsyItemLink
+  \item etsyItemLinks
   \item etsyShopResults
-  \item etsyShopLocation
+  \item etsyShopLocations
+  \item etsyShopReviews
 }
 }
 

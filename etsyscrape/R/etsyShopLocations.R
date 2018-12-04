@@ -1,10 +1,12 @@
 #'
-#' Function to obtain shop location.
+#' Function to obtain shop locations of the shops selling the items returned by an Etsy.com search.
 #'
-#' etsyShopLocations scrapes the location of each etsy shop as listed on the shop's webpage
-#' The function uses the etsyGetShops function to extract the names of the relevent etsy shops.
-#' It then creates a url for each individual shop, and scrapes that URL for the shop location. 
-#' The function returns the shop locations in a vector.
+#' This function scrapes the location of each Etsy shop as listed on the shop's homepage.
+#' \itemize{
+#'   \item Utilizes the etsyShopResults() function to extract the name of each Etsy shop from the
+#'   Etsy.com search results.
+#'   \item Creates a URL for each individual shop, and scrapes the shop URL for the shop location.
+#' }
 #'
 #' @param results_xml An xml object, obtained from scraping an Etsy search results webpage.
 #'
@@ -12,22 +14,24 @@
 #' @keywords xml
 #' @keywords location
 #'
-#' @return Returns the shop location as a character vector. 
+#' @return Returns the shop locations for all shops selling an item returned by the search results,
+#' as a character vector.
 #'
-#' @example 
+#' @example
 #' etsyShopLocations(results_xml)
+#' etsyShopLocations(xml_code)
 #'
-#' @export 
+#' @export
 
 etsyShopLocations <- function(results_xml) {
   shop <- etsyGetShops(results_xml)
   locations <- vector(length = 0)
-  
+
   for (i in 1:length(shop)) {
     location_url <- paste("https://www.etsy.com/shop/", shop[i], sep="")
-    location_page <- read_html(location_url)
-    
-    location <- trimws(html_text(html_nodes(location_page, ".shop-location")), which = "both")[1]
+    location_page <- xml2::read_html(location_url)
+
+    location <- trimws(rvest::html_text(rvest::html_nodes(location_page, ".shop-location")), which = "both")[1]
     locations <- c(locations, location)
   }
   return(locations)

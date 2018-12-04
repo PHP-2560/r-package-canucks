@@ -2,7 +2,7 @@
 % Please edit documentation in R/etsyShopLocations.R
 \name{etsyShopLocations}
 \alias{etsyShopLocations}
-\title{Function to obtain shop location.}
+\title{Function to obtain shop locations of the shops selling the items returned by an Etsy.com search.}
 \usage{
 etsyShopLocations(results_xml)
 }
@@ -10,13 +10,16 @@ etsyShopLocations(results_xml)
 \item{results_xml}{An xml object, obtained from scraping an Etsy search results webpage.}
 }
 \value{
-Returns the shop location as a character vector.
+Returns the shop location for each shop selling an item in the search results,
+as a character vector.
 }
 \description{
-etsyShopLocations scrapes the location of each etsy shop as listed on the shop's webpage
-The function uses the etsyGetShops function to extract the names of the relevent etsy shops.
-It then creates a url for each individual shop, and scrapes that URL for the shop location. 
-The function returns the shop locations in a vector.
+This function scrapes the location of each Etsy shop as listed on the shop's homepage.
+#' \itemize{
+  \item Utilizes the etsyShopResults() function to extract the name of each Etsy shop from the
+  Etsy.com search results.
+  \item Creates a URL for each individual shop, and scrapes the shop URL for the shop location.
+}
 }
 \keyword{html}
 \keyword{location}
