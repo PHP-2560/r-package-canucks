@@ -24,7 +24,7 @@
 #' @export
 
 etsyShopLocations <- function(results_xml) {
-  shop <- etsyGetShops(results_xml)
+  shop <- etsyShopResults(results_xml)
   locations <- vector(length = 0)
 
   for (i in 1:length(shop)) {

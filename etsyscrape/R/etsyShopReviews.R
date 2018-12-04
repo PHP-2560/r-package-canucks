@@ -21,6 +21,7 @@
 #'
 #' @example
 #' etsyShopReviews(results_xml)
+#' etsyShopReviews(xml_code)
 #'
 #' @export
 

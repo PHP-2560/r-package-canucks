@@ -10,12 +10,12 @@ etsyShopLocations(results_xml)
 \item{results_xml}{An xml object, obtained from scraping an Etsy search results webpage.}
 }
 \value{
-Returns the shop location for each shop selling an item in the search results,
+Returns the shop locations for all shops selling an item returned by the search results,
 as a character vector.
 }
 \description{
 This function scrapes the location of each Etsy shop as listed on the shop's homepage.
-#' \itemize{
+\itemize{
   \item Utilizes the etsyShopResults() function to extract the name of each Etsy shop from the
   Etsy.com search results.
   \item Creates a URL for each individual shop, and scrapes the shop URL for the shop location.

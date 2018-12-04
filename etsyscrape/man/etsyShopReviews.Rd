@@ -2,7 +2,7 @@
 % Please edit documentation in R/etsyShopReviews.R
 \name{etsyShopReviews}
 \alias{etsyShopReviews}
-\title{Function to obtain shop reviews.}
+\title{Function to obtain the customer text-based reviews of each shop selling an item returned by an Etsy.com search.}
 \usage{
 etsyShopReviews(results_xml)
 }
@@ -10,15 +10,19 @@ etsyShopReviews(results_xml)
 \item{results_xml}{An xml object, obtained from scraping an Etsy search results webpage}
 }
 \value{
-Returns the shop reviews as a character vector.
+Returns a character vector of paragraphs representing the reviews from each individual shop.
 }
 \description{
-This function scrapes the text-based customer reviews of each shop resulting from the etsy.com search
-The function uses the etsyGetShops function to extract the names of the relevent etsy shops.
-It then creates a url for each individual shop, and scrapes that URL for the shop reviews.
-The function collapses all the different reviews on the first page (only) of the shop's review url into one text paragraph,
-and returns a vector of paragraphs representing the reviews from each shop.
+This function scrapes the customer reviews of each Etsy shop.
+\itemize{
+  \item Utilizes the etsyShopResults() function to extract the name of each Etsy shop from the
+  Etsy.com search results.
+  \item Creates a URL for each individual shop, and scrapes the shop URL for the shop reviews.
+  \item Collapses each individual review from the first page of the shop's reviews (only)
+  into one text paragraph.
+}
 }
 \keyword{html}
 \keyword{reviews}
+\keyword{shop}
 \keyword{xml}
