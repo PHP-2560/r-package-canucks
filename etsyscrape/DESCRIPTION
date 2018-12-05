@@ -14,5 +14,9 @@ LazyData: true
 RoxygenNote: 6.1.1
 Imports: 
     dplyr,
-    xml2,
-    rvest
+    rvest,
+    xml2
+Suggests: 
+    knitr, 
+    rmarkdown
+VignetteBuilder: knitr
