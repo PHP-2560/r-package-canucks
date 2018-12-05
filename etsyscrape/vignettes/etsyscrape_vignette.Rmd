@@ -21,7 +21,7 @@ To view Etsy, visit <http://etsy.com>.
 
 This package allows the user to scrape and explore the information returned by an Etsy online search. 
 
-The etsyscrape package has 7 functions suited for this purpose: 
+The etsyscrape package has six functions suited for this purpose: 
 
   * etsyURL()
   * etsyXML()
@@ -29,7 +29,6 @@ The etsyscrape package has 7 functions suited for this purpose:
   * etsyItemLinks()
   * etsyShopResults()
   * etsyShopLocations()
-  * etsyShopReviews()
 
 This document introduces you to etsyscrape’s basic set of tools and shows you how to apply them to scraped html data from Etsy.com search results. 
 
@@ -99,7 +98,7 @@ The etsyItemResults() function provides the names of the items returned by an Et
 
 <br>
 
-Following with the "Christmas socks" example, the item names are highlighted below:
+Following with the "Christmas socks" example, the item names are highlighted in the image:
 
 ```{r, out.width = "1020px", echo=FALSE}
 knitr::include_graphics("ChristmasSocksItems.png")
@@ -135,14 +134,13 @@ knitr::include_graphics("ChristmasSocksItem1Page.png")
 ```
 
 
-
 ### etsyShopResults()
 
 The etsyShopResults() function provides the names of the shops selling items returned by an Etsy.com search. The function takes one argument: the scraped XML.
 
 <br>
 
-Following with the "Christmas socks" example, the shop names are highlighted below:
+Following with the "Christmas socks" example, the shop names are highlighted in the image:
 
 ```{r, out.width = "1020px", echo=FALSE}
 knitr::include_graphics("ChristmasSocksShops.png")
@@ -175,8 +173,9 @@ knitr::include_graphics("ChristmasSocksItem1Shop.png")
 
 <br>
 
-The location returned is the location shown on the shop's webpage. 
-The function returns a vector of shop names corresponding to the returned items.
+The location obtained by the function is the location shown on the shop's webpage. 
+
+The function returns a vector of shop names corresponding to the returned items. Each element of the vector represents the location of one shop. 
 
 ```{r}
 shop_locations <- etsyShopLocations(xml_results)
