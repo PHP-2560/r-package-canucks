@@ -13,7 +13,6 @@
 #'   \item etsyItemLinks()
 #'   \item etsyShopResults()
 #'   \item etsyShopLocations()
-#'   \item etsyShopReviews()
 #' }
 #'
 #'
