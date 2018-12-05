@@ -7,13 +7,13 @@
 #'
 #' @section etsyscrape functions:
 #' \itemize{
-#'   \item etsyURL
-#'   \item etsyXML
-#'   \item etsyItemResults
-#'   \item etsyItemLinks
-#'   \item etsyShopResults
-#'   \item etsyShopLocations
-#'   \item etsyShopReviews
+#'   \item etsyURL()
+#'   \item etsyXML()
+#'   \item etsyItemResults()
+#'   \item etsyItemLinks()
+#'   \item etsyShopResults()
+#'   \item etsyShopLocations()
+#'   \item etsyShopReviews()
 #' }
 #'
 #'
